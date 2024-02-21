@@ -13,7 +13,11 @@ const connect = function () {
 
     conn.write("Name: BEH");
 
-    
+    // setTimeout(() => {conn.write("Move: up")}, 1000);
+    // setTimeout(() => {conn.write("Move: right")}, 2000);
+    // setTimeout(() => {conn.write("Move: down")}, 3000);
+    // setTimeout(() => {conn.write("Move: left")}, 4000);
+
   conn.on("data", (data) => {
     console.log(data);
   });

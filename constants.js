@@ -13,6 +13,6 @@ const messageKeys = {
   p: "Say: yo",
   o: "Say: LFG!",
   l: "Say: imma winna"
-}
+};
 
 module.exports = {IP, PORT, playerName, movementKeys, messageKeys};

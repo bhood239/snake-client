@@ -2,17 +2,18 @@ const {movementKeys, messageKeys} = require("./constants");
 // Stores the active TCP connection object.
 let connection;
 
-const handleUserInput = function (key) {
+const handleUserInput = function(key) {
   //handle ctl+c user input
-    if (key === '\u0003') {
-      process.exit();
-    }
-    if (movementKeys[key]) {
-      connection.write(movementKeys[key]);
-    }
-    if (messageKeys[key]) {
-      connection.write(messageKeys[key]);
-    }
+  if (key === '\u0003') {
+    process.exit();
+  }
+  //handle movements and messages
+  if (movementKeys[key]) {
+    connection.write(movementKeys[key]);
+  }
+  if (messageKeys[key]) {
+    connection.write(messageKeys[key]);
+  }
 };
 
 // setup interface to handle user input from stdin
